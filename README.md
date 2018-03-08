@@ -1,26 +1,49 @@
 # cmake-google-test-skeleton
-Skeleton for C++ projects using CMake and google-test
 
-To compile and test:
-Compile:
+Skeleton for C++ projects using CMake and google-test.
 
+This project adds tests using google-test and google-mock.
+The google-test and google-mock dependency is downloaded automatically from git.
+
+## Prepare the build directory
+
+```
 mkdir build
 cd build
-cmkae ../
+cmake ../
+```
+StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
-To compile and execute the tests:
+## Compile
+
+```
+cmake --build . --target all
+```
+This compiles everything in the project, tests included.
+
+## Compile and launch tests
+
+```
 cmake --build . --target compile_and_test
+```
+If only the tests are interesting for you, a target that compiles and launch them is added to the project.
 
-To only compile:
-cmake --build . --target all -- -j 2
+## Launch tests
 
-To only launch tests:
+```
 ctest
+```
+It is possible to launch the tests using the cmake **ctest**
+The obtained output is different from the one expected for google-tests tests.
 
-The compiled tests under '<project_source_dir>/build/tests'
-For instance, to execute the two available suites:
-./tests/complexTest
-./tests/Test
+## Tests binaries
 
-A hellow-world executable is compiled under '<project_source_dir>/build/' and can be executed:
-./ejercicio1
+There are 2 tests binaries (under the build directory):
+*<build_dir>/tests/Tests*
+*<build_dir>/tests/complexTest*
+Both can be executed and the typical google-test output is obtained.
+
+## Project binary
+
+The project includes a hello world executable that is compiled at:
+*<build_dir>/ejercicio1*
