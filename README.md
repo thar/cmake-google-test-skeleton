@@ -34,16 +34,17 @@ If only the tests are interesting for you, a target that compiles and launch the
 ctest
 ```
 It is possible to launch the tests using the cmake **ctest**
+
 The obtained output is different from the one expected for google-tests tests.
 
 ## Tests binaries
 
 There are 2 tests binaries (under the build directory):
-*<build_dir>/tests/Tests*
-*<build_dir>/tests/complexTest*
+* *<build_dir>/tests/Tests*
+* *<build_dir>/tests/complexTest*
 Both can be executed and the typical google-test output is obtained.
 
 ## Project binary
 
 The project includes a hello world executable that is compiled at:
-*<build_dir>/ejercicio1*
+* *<build_dir>/ejercicio1*
