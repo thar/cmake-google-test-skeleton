@@ -19,7 +19,7 @@ include_directories("${gtest_SOURCE_DIR}/include"
                     "${gmock_SOURCE_DIR}/include")
 
 # Trivial example using gtest and gmock
-add_executable(Tests ComplexTest.cpp)
+add_executable(Tests example.cpp)
 target_link_libraries(Tests LINK_PUBLIC gtest gmock_main)
 add_test(NAME test COMMAND Tests)
 
@@ -27,5 +27,5 @@ add_test(NAME test COMMAND Tests)
 include_directories ("${PROJECT_SOURCE_DIR}/src")
 
 add_executable(complexTest ComplexTest.cpp)
-target_link_libraries(Tests LINK_PUBLIC gtest gmock_main complex)
+target_link_libraries(complexTest LINK_PUBLIC gtest gmock_main complex)
 add_test(NAME complexTest COMMAND complexTest)
