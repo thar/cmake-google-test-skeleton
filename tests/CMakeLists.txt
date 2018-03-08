@@ -29,3 +29,7 @@ include_directories ("${PROJECT_SOURCE_DIR}/src")
 add_executable(complexTest ComplexTest.cpp)
 target_link_libraries(complexTest LINK_PUBLIC gtest gmock_main complex)
 add_test(NAME complexTest COMMAND complexTest)
+
+set(TESTS_NAMES Tests complexTest)
+add_custom_target(compile_and_test COMMAND ${CMAKE_CTEST_COMMAND}
+                  DEPENDS ${TESTS_NAMES})
