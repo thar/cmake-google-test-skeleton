@@ -42,6 +42,7 @@ The obtained output is different from the one expected for google-tests tests.
 There are 2 tests binaries (under the build directory):
 * *<build_dir>/tests/Tests*
 * *<build_dir>/tests/complexTest*
+
 Both can be executed and the typical google-test output is obtained.
 
 ## Project binary
